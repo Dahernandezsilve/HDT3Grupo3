@@ -24,7 +24,7 @@ public class PostfixCalc implements IPostfixCalc {
         if (Stack.isEmpty()){
             for (int i=0; i<elementos.length;i++){
                 while (Stack.count()<=1){
-                    if (elementos[i].equals("1") | elementos[i].equals("2") | elementos[i].equals("3") | elementos[i].equals("4") | elementos[i].equals("5") | elementos[i].equals("6") | elementos[i].equals("7") | elementos[i].equals("8") | elementos[i].equals("9")){
+                    if (elementos[i].equals("0") | elementos[i].equals("1") | elementos[i].equals("2") | elementos[i].equals("3") | elementos[i].equals("4") | elementos[i].equals("5") | elementos[i].equals("6") | elementos[i].equals("7") | elementos[i].equals("8") | elementos[i].equals("9")){
                         Stack.push(parseInt(elementos[i]));
                         i++;
                     }
