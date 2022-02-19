@@ -1,4 +1,5 @@
 import static java.lang.Integer.parseInt;
+import static java.lang.Integer.valueOf;
 
 public class PostfixCalc implements IPostfixCalc {
 
@@ -9,29 +10,38 @@ public class PostfixCalc implements IPostfixCalc {
         int valor1;
         int valor2;
         String operando;
-        int resultado;
+        int resultado = 0;
         String[] elementos = expresion.split(" ");
-        for (String elemento: elementos){
-            while (Stack.count()!=2){
-                if (elemento.equals("1") | elemento.equals("2") | elemento.equals("3") || elemento.equals("4") || elemento.equals("5") | elemento.equals("6") | elemento.equals("7") | elemento.equals("8") | elemento.equals("9")){
-                    Stack.push(parseInt(elemento));
+
+
+        for (int i=0; i<elementos.length;i++){
+            while (Stack.count()<=1){
+                if (elementos[i].equals("1") | elementos[i].equals("2") | elementos[i].equals("3") | elementos[i].equals("4") | elementos[i].equals("5") | elementos[i].equals("6") | elementos[i].equals("7") | elementos[i].equals("8") | elementos[i].equals("9")){
+                    Stack.push(parseInt(elementos[i]));
+                    i++;
                 }
             }
-            if (elemento.equals("+") | elemento.equals("-") | elemento.equals("/") || elemento.equals("*")){
-                Stack.push(elemento);
+            if (elementos[i].equals("+") | elementos[i].equals("-") | elementos[i].equals("/") | elementos[i].equals("*")){
+                Stack.push(elementos[i]);
             }
-            valor1 = (int) Stack.peek();
+
+            operando = (String) Stack.peek();
             Stack.pull();
             valor2 = (int) Stack.peek();
             Stack.pull();
-            operando = (String) Stack.peek();
-            if (operando== "+"){
+            valor1 = (int) Stack.peek();
+            Stack.pull();
+            if (operando.equals("+")){
                 resultado = valor1 + valor2;
-            } else if (operando == "-"){
+            } else if (operando.equals("-")){
                 resultado = valor1 - valor2;
+            } else if (operando.equals("*")){
+                resultado = valor1 * valor2;
+            } else if (operando.equals("/")){
+                resultado = valor1 / valor2;
             }
-
+            Stack.push(resultado);
         }
-        return 0;
+        return resultado;
     }
 }
