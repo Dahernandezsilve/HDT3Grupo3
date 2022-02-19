@@ -1,4 +1,24 @@
+/**Universidad del Valle de Guatemala
+ * Facultad de Ingeniería
+ * Departamento de Ciencia de la Computación.
+ * Algoritmos y Estructuras de datos.
+ * Sección: 20
+ *
+ * Hoja de Trabajo #2
+ *
+ * Entorno: El ejercicio tiene como objetivo, lograr que el usuario
+ * experimente una simulación de un sistema de radio a traves de una interfaz.
+ *
+ * Estudiante: Diego Alexander Hernández Silvestre
+ * Carné: 21270
+ * @version 1.0
+ * @author Diego Alexander Hernández Silvestre
+ */
 public class DriverProgram {
+    /**
+     * Método principal que se encargará de mostrar al usuario el resultado de establecer su archivo.
+     * @param args Permite ejecutar el programa.
+     */
     public static void main (String[] args){
         TXT datos = new TXT();
         PostfixCalc p = new PostfixCalc();

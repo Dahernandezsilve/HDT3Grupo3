@@ -1,9 +1,13 @@
+/**
+ * Interfaz que permite añadir los métodos que la calculadora de postfix empleara.
+ * @author Diego Alexander Hernández Silvestre
+ */
 public interface IPostfixCalc {
 
-    /***
-     * This method is used to evaluate a postfix expression
-     * @param expresion this is a single expression like: 1 2 + 4 * 3 +
-     * @return the evaluation of the expression
+    /**
+     * Se encargara de evaluar la expresion que el usuario desee ingresar.
+     * @param expresion Es una simple expresion como: 1 2 + 4 * 3 +
+     * @return El resultado de evaluar la expresion.
      */
     int Evaluate(String expresion);
 }
