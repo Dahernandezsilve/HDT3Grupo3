@@ -9,6 +9,9 @@ public class StackArrayList<T> implements IStack<T>{
 
     private ArrayList<T> coreList;
 
+    /**
+     * Constructor de la clase StackArrayList.
+     */
     public StackArrayList(){
         coreList = new ArrayList<T>();
     }
