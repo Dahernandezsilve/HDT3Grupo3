@@ -1,5 +1,3 @@
-import static java.lang.Integer.TYPE;
-import static java.lang.Integer.parseInt;
 
 /**Universidad del Valle de Guatemala
  * Facultad de Ingeniería
